@@ -1,0 +1,46 @@
+{% extends 'basecompras.html' %}
+
+{% block content %}
+  <h2>¿Cómo desea su helado de hielo?</h2>
+
+  <form method="POST" style="display: flex; flex-direction: column; align-items: flex-start;">
+    {% csrf_token %}
+
+	<br>
+	<label for="tamano">Tamaño:</label>
+	<select name="tamano" id="tamano">
+		<option value="pequeno">Pequeño (Q15.00)</option>
+		<option value="mediano">Mediano (Q20.00)</option>
+		<option value="grande">Grande (Q24.00)</option>
+	</select>
+	<br>
+
+	<br>
+    <label for="sabores">Sabor:</label>
+    <select id="sabores" name="sabor">
+      <option value="limon">Limón</option>
+      <option value="mango">Mango</option>
+      <option value="coco">Coco</option>
+    </select>
+	<br>
+
+	<br>
+	<label for="topping">Topping:</label>
+	<select name="topping" id="topping">
+		<option value="no aplica">Sin topping</option>
+		<option value="chispas">Chispas de chocolate (Q5.00)</option>
+		<option value="anicillos">Anicillos (Q3.00)</option>
+		<option value="crema">Crema batida (Q7.00)</option>
+		<option value="chocolate">Chocolate líquido (Q5.00)</option>
+	</select>
+	<br>
+
+	<div style="display: inline-flex; margin-left: 300px;">Subtotal: Q{{ acumulado }}.00</div>
+
+    <button type="submit" name="sumar" value="sumar" style="position: absolute; bottom: 90px; right: 300px;">Agregar al carrito</button>
+	<button type="reset" style="position: absolute; bottom: 90px; right: 220px;">Resetear</button>
+	<button type="submit" name="pagar" value="pagar" formaction="{% url 'comprarealizada' %}" style="position: absolute; bottom: 90px; right: 160px;">Pagar</button>
+	<button type="submit" name="cancelar" value="cancelar" style="position: absolute; bottom: 90px; right: 80px;">Cancelar</button>
+  </form>
+{% endblock %}
+

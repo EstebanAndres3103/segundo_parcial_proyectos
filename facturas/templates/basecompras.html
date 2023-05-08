@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Mi Heladería</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #F4F4F4;
+			font-family: Arial, sans-serif;
+		}
+
+		header {
+			background-color: #FFB347;
+			color: #FFFFFF;
+			padding: 10px;
+			text-align: center;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		nav ul li a {
+			color: #FFFFFF;
+			font-size: 20px;
+			font-weight: bold;
+			text-decoration: none;
+			padding: 10px;
+			transition: background-color 0.3s ease;
+		}
+
+		nav ul li a:hover {
+			background-color: #FF8C00;
+			color: #FFFFFF;
+		}
+
+		main {
+			padding: 50px;
+			text-align: center;
+		}
+
+		footer {
+			background-color: #FFB347;
+			color: #FFFFFF;
+			padding: 10px;
+			text-align: center;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Mi Heladería</h1>
+		<nav>
+			<ul>
+				<li><a href="/cremoso">Helados Cremosos</a></li>
+				<li><a href="/hielo">Helados de Hielo</a></li>
+				<li><a href="/inicio">Inicio</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		{% block content %}
+		{% endblock %}
+	</main>
+
+	<footer>
+		<p>© 2023 Mi Heladería. Todos los derechos reservados.</p>
+	</footer>
+</body>
+</html>
+

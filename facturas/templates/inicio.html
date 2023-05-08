@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página de inicio de la heladería</title>
+	<style>
+		body {
+			background-color: #FFE4C4;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			color: #E57A44;
+			font-size: 36px;
+			font-weight: bold;
+			text-shadow: 2px 2px 2px #CE5E31;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		button {
+			padding: 10px 20px;
+			font-size: 20px;
+			border-radius: 5px;
+			border: none;
+			color: #fff;
+			background-color: #E57A44;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+
+		button:hover {
+			background-color: #CE5E31;
+		}
+	</style>
+</head>
+<body>
+	<h1>Bienvenidos a la heladería</h1>
+	<div class="container">
+		<a href="{% url 'admin:index' %}" target="_blank"><button style="background-color: #CE5E31;">Panel de Administración</button></a>
+		<a href="{% url 'registro' %}"><button style="background-color: #CE5E31;">Ir a compras</button></a>
+		<a href="{% url 'tables' %}" target="_blank"><button style="background-color: #CE5E31;">Ingresar como Administrador</button></a>
+	</div>
+</body>
+</html>

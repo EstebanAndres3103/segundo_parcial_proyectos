@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Acciones en la base de datos</title>
+	<style>
+		body {
+			background-color: #F5D0A9; /* color crema */
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			color: #8B0000; /* rojo oscuro */
+			font-size: 36px;
+			font-weight: bold;
+			text-shadow: 2px 2px 2px #F4A460; /* marrón claro */
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		button {
+			padding: 10px 20px;
+			font-size: 20px;
+			border-radius: 5px;
+			border: none;
+			color: #fff;
+			background-color: #8B0000; /* rojo oscuro */
+			cursor: pointer;
+			margin-top: 20px;
+		}
+
+		button:hover {
+			background-color: #CD5C5C; /* rojo claro */
+		}
+	</style>
+</head>
+<body>
+	<h1>Acciones en la base de datos</h1>
+	<div class="container">
+		<button type="button" location.href='{% url 'ver_tablas' %}'>Ver tablas</button>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Iniciar sesión</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+</head>
+<body style="background-color: #F5D0A9;">
+	<div class="login-box">
+		<h2 style="color: #8B0000;">Iniciar sesión</h2>
+		<form method="POST">
+			{% csrf_token %}
+			<div class="user-box">
+				<input type="text" name="username" required>
+				<label style="color: #8B0000;">Usuario</label>
+			</div>
+			<div class="user-box">
+				<input type="password" name="password" required>
+				<label style="color: #8B0000;">Contraseña</label>
+			</div>
+			{% if error %}
+			<p class="error-message" style="color: red;">{{ error }}</p>
+			{% endif %}
+			<button type="submit" style="background-color: #8B0000;">Ingresar</button>
+		</form>
+	</div>
+</body>
+</html>
